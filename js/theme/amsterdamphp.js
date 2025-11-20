@@ -3,6 +3,9 @@ function fillSlideData()
     if (! slideData['text']['lightning-talk-speaker-name']) {
         $('#lightning-talk').remove();
     }
+    if (! slideData['images']['lightning-talk-speaker-face']['src']) {
+        $('#lightning-talk-speaker-face').remove();
+    }
 
     for(var index in slideData["text"]) {
         $("#"+index).html(slideData["text"][index]);
