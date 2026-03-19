@@ -160,6 +160,34 @@ body {
   padding: 1em;
 }
 
+.crossed-prize {
+  position: relative;
+  display: inline-block;
+}
+
+.crossed-prize::before,
+.crossed-prize::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 14px;
+  background: #ff1f1a;
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.crossed-prize::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.crossed-prize::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .reveal section img.speaker {
   margin: 0;
   border: 15px solid white;
